@@ -1,0 +1,443 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR */
+.nav-link{
+    color: white;
+}
+.navbar-nav{
+    margin-left: auto;
+}
+.nav-link:hover{
+    color: red !important;
+}
+.navbar{
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.856);
+}
+.d-flex input{
+    border: 1px solid white;
+    padding: 8px;
+}
+.d-flex button{
+    border: 1px solid white;
+    width: 35px;
+}
+.d-flex button:hover{
+    background-color: red;
+    border: 1px solid red;
+}
+/* SLIDER SECTION */
+.home-text{
+    position: relative;
+    top: 150px;
+    color: white;
+}
+.home-text h1{
+    font-size: 60px;
+}
+.home-text h2{
+    font-size: 45px;
+}
+.text-animation1{
+    animation: text 3s 1 linear;
+}
+.text-animation2{
+    animation: text1 3s 1 linear;
+    color: white;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/home/toyota_1.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: images 12s infinite linear;
+}
+
+/* BOOKING SECTION */
+.booking{
+    position: relative;
+    top: -40px;
+}
+.booking-sec{
+    width: 100%;
+    height: 450px;
+    background-color: white;
+    box-shadow: 0px 0px 6px 0px black;
+}
+.booking-box{
+    height: 415px;
+    width: 85%;
+    background-color: red;
+    margin-top: 20px;
+    margin-left: 20px;
+    animation: bookingbox 4s infinite linear;
+}
+.booking-box img{
+    margin-top: 15%;
+    animation: zoom 4s infinite linear;
+}
+.booking-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+    
+}
+.form-group input{
+    margin: 10px ;
+    border: 1px solid red;
+}
+.line{
+    width: 41%;
+    height: 2px;
+    background-color: red;
+}
+
+/* travel */
+.travel{
+    margin-top: 7%;
+}
+.travel-btn button{
+    display: inline;
+    width: 20%;
+    height: 210%;   
+} 
+.travel-list{
+    margin-top: 8%;
+}
+.travel-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.travel-items li{
+    list-style: none;
+}    
+.travel-items li a{
+    text-decoration: none;
+    color: #7a8292;
+    padding: 15px;
+}
+.travel-btn button:hover {
+    color: black;
+    transform: scale(1.03);
+}
+.travel-items li a:hover{
+    color: red;
+}
+
+/* CARD SECTION */
+.card-sec{
+    margin-top: 10%;
+    background-color: #f8f9fa;
+}
+.card-text{
+    padding-top: 8%;
+}
+.card-box{
+    margin: 10px 20px;
+}
+.card{
+    margin: 20px 0px;
+}
+.card-para p{
+    padding:3% 20% 0% 20%;
+}
+.list-group h5, h6{
+    display: inline;
+}
+/* APP SECTION */
+.app{
+    background-color: rgb(228, 57, 57);
+    color: white;
+    margin-top: 7%;
+}
+.app-text{
+    margin-top: 9%;
+}
+.app-list li{
+    list-style: none;
+}
+.app-list li a{
+    text-decoration: none;
+    color: white;
+}
+.app-image1{
+    animation: appimage1 2s infinite linear;
+    margin-top: 15%;
+}
+.app-image2{
+    animation: appimage1 3s infinite linear;
+    margin-top: 8%;
+}
+.app-btn button{
+    width: 30%;
+    height: 60px;
+}
+
+/* BLOG SECTION */
+.blog{
+    background-color: #f8f9fa;
+    margin-top: 7%;
+}
+
+/* CAR SECTION */
+.car{
+    position: relative;
+    background: url(../assets/images/slider/promo_bg.jpg) no-repeat fixed 0 0/cover;
+    z-index: 1;
+    height: 300px;
+    width: 100%;
+    background-size: 100%;
+    margin-top: 10%;
+}
+
+/* MEMBER SECTION */
+.member{
+    background-color: #f8f9fa;
+    margin-top: 7%;
+}
+.member-card{
+    display: grid;
+    justify-content: center;
+}
+
+/* FOOTER */
+.footer{
+    position: relative;
+    background: url(../assets/images/home/footer-bg.jpg) no-repeat scroll 0 0/cover;
+    z-index: 1;
+    height: 110%;
+    width: 100%;
+    background-size: cover;
+}
+.footer-text{
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+.footer-text a{
+    text-decoration: none;
+    color: white;
+    padding: 0px 10px;
+}
+
+
+/* ANIMATION */
+@keyframes text{
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to{
+        opacity: 100;
+        transform: translateX(0);
+    }
+}
+@keyframes text1{
+    from{
+        opacity: 0;
+        transform: translateY(-100%)
+    }
+    to{
+        opacity: 100;
+        transform: translateY(0);
+    }
+}
+@keyframes images{
+    0%{
+        background-image: url(images/home/toyota_1.jpg);
+    }
+    20%{
+        background-image: url(images/home/toyota_1.jpg);
+    }
+    40%{
+        background-image: url(images/home/toyota_2.jpg);
+    }
+    60%{
+        background-image: url(images/home/toyota_2.jpg);
+    }
+    80%{
+        background-image: url(images/home/toyota_4.jpg);
+    }
+    100%{
+        background-image: url(images/home/toyota_1.jpg);
+    }
+}
+@keyframes bookingbox{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+@keyframes appimage1{
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(-10%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+@keyframes zoom{
+    0%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 990px) {
+    .app-image2{
+        margin-left: -24%;
+    }
+    .booking-sec{
+        height: 160vh;
+
+    }
+    .car-sec img{
+        margin-left: -30px;
+    }
+
+}
+@media (max-width: 900px){
+    .booking{
+        top: -125px;
+    }
+    .booking-sec{
+        height: 160vh;
+    }
+    .travel{
+        margin-top: -6%;
+    }
+}
+@media (max-width:768px) {
+    .home-text{
+        top: 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .booking{
+        top: -230px;
+    }
+    .booking-sec{
+        height: 160vh;
+    }
+    .app-image2{
+        margin-left: 0%;
+    }
+    .travel-btn button{
+        width: 30%;
+    height: 175%;
+    }
+    .travel {
+        margin-top: -25%;
+    } 
+    .car{
+        background-size: cover;
+    }   
+    .car-sec img{
+        display: none;
+    }
+    .car-text{
+        text-align: center;
+    }
+    .card-box{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .blog-card{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-text h1{
+        font-size: 40px;
+        line-height: 25px;
+    }
+    .home-text h2 {
+        font-size: 35px;
+    }
+    .travel-btn button{
+          width: 30%;
+         height: 140%;
+    }
+    .booking{
+        top: -315px;
+    }
+    .booking-sec{
+        margin-left: 0%;
+    }
+    .booking-box img{
+        width: 100%;
+    }
+    .travel{
+        margin-top: -50%;
+    }
+}
+
+@media (max-width: 425px){
+    .home-text{
+        top: 30px;
+    }
+     .booking{
+         top: -335px;
+     }
+     .travel{
+         margin-top: -70%;
+     }
+     .travel-btn button {
+        width: 100%;
+        height: 140%;
+    }
+    .travel-btn{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px
+    }  
+    .app-image2 {
+        margin-left: -20%;
+    }      
+}
+
+@media (max-width: 375px) {
+    .home-text{
+        margin-top: -20px;
+    } 
+    .home-text h1{
+        font-size: 35px;
+        line-height: 23px;
+    }
+    .home-text h2 {
+        font-size: 30px;
+    }
+    .booking{
+        top: -367px;
+    }
+    .app-image1{
+        width: 60%;
+    }
+    .app-image2 {
+        margin-left: -23%;
+        width: 60%;
+    }    
+}    
+
