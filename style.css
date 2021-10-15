@@ -16,14 +16,18 @@
 .navbar{
     position: sticky;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.856);
+    z-index: 2;
+    background-color: white;
+}
+.navbar-collapse{
+    margin-left: auto;
 }
 .d-flex input{
-    border: 1px solid white;
+    border: 1px solid black;
     padding: 8px;
 }
 .d-flex button{
-    border: 1px solid white;
+    border: 1px solid black;
     width: 35px;
 }
 .d-flex button:hover{
@@ -51,9 +55,9 @@
 }
 .banner{
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     background-image: url(images/home/toyota_1.jpg);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     animation: images 12s infinite linear;
 }
