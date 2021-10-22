@@ -14,34 +14,38 @@ html{
     --blue: #020e27;
     --black: #000000;
 }
-.T1{
-    margin-top: 100px;
+li{
+    list-style: none;
 }
-.T2{
-    margin-top: 150px;
+a{
+    text-decoration: none;
 }
-.T3{
-    margin-top: 200px;
+.text-yellow{
+    color: var(--yellow);
+}
+.text-blue{
+    color: var(--blue);
+}
+.text-white{
+    color: var(--white);
 }
 h1{
     font-size: 50px;
 }
+
 .line{
     width: 41%;
     height: 2px;
-    background-color: red;
+    background-color: var(--yellow);
 }
 .button-style{
     background-color: var(--yellow);
-    color: var(--white);
+    color: var(--black);
 }
 .button-style:hover{
     background-color: var(--blue);
     color: var(--white);
 }
-
-
-
 
 /* NAVBAR */
 .navbar-nav{
@@ -58,8 +62,7 @@ h1{
     top: 0;
     z-index: 2;
     background-color: var(--white);
-    position: relative;
-    top: 5%;
+    margin-top: -5px;
 }
 .navbar-brand{
     color: var(--yellow) !important;
@@ -83,33 +86,53 @@ h1{
     background-color: var(--yellow);
     border: 1px solid var(--yellow);
 }
+
 /* SLIDER SECTION */
 .home-text{
     color: var(--white);
+    z-index: 2;
+    margin-top: 80px;
 }
 span{
     color: var(--yellow);
 }
-/* .text-animation1{
-    animation: text 3s 1 linear;
-}
-.text-animation2{
-    animation: text1 3s 1 linear;
-    color: white;
-} */
 .banner{
     width: 100%;
     height: 120vh;
     background-image: url(images/home/toyota_1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: 2;
     animation: images 12s infinite linear;
 }
+.banner::before{
+    position: absolute;
+    content: "";
+    z-index: 1;
+    opacity: 0.5;
+    width: 100%;
+    height: 120vh;
+    background-color: var(--blue);
+}
+.banner-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-icons ul li{
+    display: inline-block;
+    padding: 0px 10px;
+}
+.banner-icons ul{
+    z-index: 2;
+}
+
 
 /* BOOKING SECTION */
 .booking{
     position: relative;
     top: -40px;
+    z-index: 2;
 }
 .booking-sec{
     width: 100%;
@@ -120,7 +143,7 @@ span{
 .booking-box{
     height: 415px;
     width: 85%;
-    background-color: red;
+    background-color: var(--yellow);
     margin-top: 20px;
     margin-left: 20px;
     animation: bookingbox 4s 1 linear;
@@ -137,8 +160,10 @@ span{
     
 }
 .form-group input{
-    margin: 10px ;
-    border: 1px solid red;
+    margin: 10px;
+}
+.form-group input:hover{
+    border: 1px solid var(--yellow);
 }
 
 /* travel */
@@ -167,11 +192,10 @@ span{
     padding: 15px;
 }
 .travel-btn button:hover {
-    color: black;
     transform: scale(1.03);
 }
 .travel-items li a:hover{
-    color: red;
+    color: var(--yellow);
 }
 
 /* CARD SECTION */
@@ -196,9 +220,24 @@ span{
 }
 /* APP SECTION */
 .app{
-    background-color: rgb(228, 57, 57);
-    color: white;
-    margin-top: 7%;
+    position: relative;
+    background: url(../assets/images/slider/promo_bg.jpg) no-repeat fixed 0 0/cover;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    margin-top: 10%;
+    color: var(--white);
+}
+.app::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.82;
+    z-index: -1;
+    background-color: var(--blue);
 }
 .app-text{
     margin-top: 9%;
@@ -239,6 +278,19 @@ span{
     background-size: 100%;
     margin-top: 10%;
 }
+.car::after{
+    position: absolute;
+    content: "";
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0.82;
+    z-index: -1;
+    background-color: var(--blue);
+}
+
 
 /* MEMBER SECTION */
 .member{
@@ -258,6 +310,18 @@ span{
     height: 110%;
     width: 100%;
     background-size: cover;
+    margin-top: 30px;
+}
+.footer::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.92;
+    z-index: -1;
+    background-color: var(--blue);
 }
 .footer-text{
     padding-top: 10%;
@@ -271,7 +335,7 @@ span{
 
 
 /* ANIMATION */
-@keyframes text{
+/* @keyframes text{
     from{
         opacity: 0;
         transform: translateX(-100%);
@@ -290,7 +354,7 @@ span{
         opacity: 100;
         transform: translateY(0);
     }
-}
+} */
 @keyframes images{
     0%{
         background-image: url(images/home/toyota_1.jpg);
@@ -375,9 +439,6 @@ span{
         justify-content: center;
         align-items: center;
     }
-    .booking{
-        top: -230px;
-    }
     .booking-sec{
         height: 160vh;
     }
@@ -388,9 +449,6 @@ span{
         width: 30%;
     height: 175%;
     }
-    .travel {
-        margin-top: -25%;
-    } 
     .car{
         background-size: cover;
     }   
@@ -415,7 +473,6 @@ span{
 @media (max-width: 600px) {
     .home-text h1{
         font-size: 40px;
-        line-height: 25px;
     }
     .home-text h2 {
         font-size: 35px;
@@ -424,17 +481,11 @@ span{
           width: 30%;
          height: 140%;
     }
-    .booking{
-        top: -315px;
-    }
     .booking-sec{
         margin-left: 0%;
     }
     .booking-box img{
         width: 100%;
-    }
-    .travel{
-        margin-top: -50%;
     }
 }
 
@@ -442,12 +493,6 @@ span{
     .home-text{
         top: 30px;
     }
-     .booking{
-         top: -335px;
-     }
-     .travel{
-         margin-top: -70%;
-     }
      .travel-btn button {
         width: 100%;
         height: 140%;
@@ -464,18 +509,11 @@ span{
 }
 
 @media (max-width: 375px) {
-    .home-text{
-        margin-top: -20px;
-    } 
     .home-text h1{
         font-size: 35px;
-        line-height: 23px;
     }
     .home-text h2 {
         font-size: 30px;
-    }
-    .booking{
-        top: -367px;
     }
     .app-image1{
         width: 60%;
