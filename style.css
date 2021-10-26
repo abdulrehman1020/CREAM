@@ -58,11 +58,13 @@ h1{
     color: var(--yellow) !important;
 }
 .navbar{
-    position: sticky;
-    top: 0;
-    z-index: 2;
+    position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999999;
+  box-shadow: 0px 0px 6px 0px var(--blue);
     background-color: var(--white);
-    margin-top: -5px;
+
 }
 .navbar-brand{
     color: var(--yellow) !important;
@@ -91,14 +93,14 @@ h1{
 .home-text{
     color: var(--white);
     z-index: 2;
-    margin-top: 80px;
+    margin-top: 17%;
 }
 span{
     color: var(--yellow);
 }
 .banner{
     width: 100%;
-    height: 120vh;
+    height: 110vh;
     background-image: url(images/home/toyota_1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -111,7 +113,7 @@ span{
     z-index: 1;
     opacity: 0.5;
     width: 100%;
-    height: 120vh;
+    height: 110vh;
     background-color: var(--blue);
 }
 .banner-icons{
@@ -138,7 +140,7 @@ span{
     width: 100%;
     height: 450px;
     background-color: white;
-    box-shadow: 0px 0px 6px 0px black;
+    box-shadow: 0px 0px 6px 0px var(--black);
 }
 .booking-box{
     height: 415px;
@@ -335,26 +337,6 @@ span{
 
 
 /* ANIMATION */
-/* @keyframes text{
-    from{
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    to{
-        opacity: 100;
-        transform: translateX(0);
-    }
-}
-@keyframes text1{
-    from{
-        opacity: 0;
-        transform: translateY(-100%)
-    }
-    to{
-        opacity: 100;
-        transform: translateY(0);
-    }
-} */
 @keyframes images{
     0%{
         background-image: url(images/home/toyota_1.jpg);
@@ -432,13 +414,9 @@ span{
     }
 }
 @media (max-width:768px) {
-    .home-text{
-        top: 55px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+    /* .home-text{
+        margin-top: 50px;
+    } */
     .booking-sec{
         height: 160vh;
     }
@@ -476,6 +454,9 @@ span{
     }
     .home-text h2 {
         font-size: 35px;
+    }
+    .home-text{
+        margin-top: 25%;
     }
     .travel-btn button{
           width: 30%;
