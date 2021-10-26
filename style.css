@@ -32,12 +32,6 @@ a{
 h1{
     font-size: 50px;
 }
-h5{
-    font-size: 25px;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
 .line{
     width: 41%;
     height: 2px;
@@ -67,6 +61,8 @@ h5{
   width: 100%;
   top: 0;
   z-index: 999999;
+  margin-left: auto;
+  /* left: 7%; */
   box-shadow: 0px 0px 6px 0px var(--blue);
     background-color: var(--white);
 
@@ -103,6 +99,11 @@ h5{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.home-text h5{
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 span{
     color: var(--yellow);
