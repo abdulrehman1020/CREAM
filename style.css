@@ -1,5 +1,6 @@
 
 /* Deafault CSS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 html{
     scroll-behavior: smooth;
 }
@@ -13,6 +14,7 @@ html{
     --yellow: #ffbb03;
     --blue: #020e27;
     --black: #000000;
+    --grey: #808080;
 }
 li{
     list-style: none;
@@ -29,8 +31,15 @@ a{
 .text-white{
     color: var(--white);
 }
+.text-grey{
+    color: var(--grey);
+    font-weight: bold;
+}
 h1{
     font-size: 50px;
+}
+h6{
+    font-family: 'Roboto Condensed', sans-serif;
 }
 .line{
     width: 41%;
@@ -40,6 +49,8 @@ h1{
 .button-style{
     background-color: var(--yellow);
     color: var(--black);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 22px;
 }
 .button-style:hover{
     background-color: var(--blue);
@@ -52,6 +63,8 @@ h1{
 }
 .navbar-nav li a {
     color: var(--blue) !important;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
 }
 .nav-link:hover{
     color: var(--yellow) !important;
@@ -104,6 +117,7 @@ h1{
     font-size: 25px;
     font-weight: 700;
     letter-spacing: 2px;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 span{
     color: var(--yellow);
@@ -121,7 +135,7 @@ span{
     position: absolute;
     content: "";
     z-index: 1;
-    opacity: 0.5;
+    opacity: 0.7;
     width: 100%;
     height: 100vh;
     background-color: var(--blue);
@@ -178,9 +192,59 @@ span{
     border: 1px solid var(--yellow);
 }
 
+/* SERVICES */
+
+.services-sec{
+    padding-top: 5%;
+}
+.services{
+    position: relative;
+    background: url(../assets/images/slider/promo_bg.jpg) no-repeat fixed 0 0/cover;
+    z-index: 1;
+    height: 110vh;
+    width: 100%;
+    margin-top: 10%;
+    color: var(--white);
+}
+.services::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110vh;
+    opacity: 0.82;
+    z-index: -1;
+    background-color: var(--blue);
+}
+.services-card img{
+    width: 20%;
+    position: relative;
+    margin: auto;
+    top: 10%;
+}
+.services-card .card{
+    height: 60vh;
+}
+.services-card .card:hover{
+    transform: translateY(-10px);
+    transition: 0.5s ease-in;
+    border-top: 4px solid var(--yellow);
+}
+.services-card .card .card-body{
+    margin-top: 17%;
+}
+.card-body h5{
+    font-size: 27px;
+}
+
 /* travel */
 .travel{
-    margin-top: 7%;
+    background-color: #f8f9fa;
+    height: 80vh;
+}
+.travel .container{
+    padding-top: 7%;
 }
 .travel-btn button{
     display: inline;
@@ -200,7 +264,7 @@ span{
 }    
 .travel-items li a{
     text-decoration: none;
-    color: #7a8292;
+    color: var(--grey);
     padding: 15px;
 }
 .travel-btn button:hover {
@@ -211,10 +275,6 @@ span{
 }
 
 /* CARD SECTION */
-.card-sec{
-    margin-top: 10%;
-    background-color: #f8f9fa;
-}
 .card-text{
     padding-top: 8%;
 }
@@ -276,7 +336,6 @@ span{
 
 /* BLOG SECTION */
 .blog{
-    background-color: #f8f9fa;
     margin-top: 7%;
 }
 
@@ -306,8 +365,7 @@ span{
 
 /* MEMBER SECTION */
 .member{
-    background-color: #f8f9fa;
-    margin-top: 7%;
+    margin-top: 5%;
 }
 .member-card{
     display: grid;
@@ -419,9 +477,6 @@ span{
     .booking-sec{
         height: 160vh;
     }
-    .travel{
-        margin-top: -6%;
-    }
 }
 @media (max-width:768px) {
     /* .home-text{
@@ -456,6 +511,12 @@ span{
         justify-content: center;
         align-items: center;
     }
+    .services{
+        height: 160vh;
+    }
+    .services::after{
+        height: 160vh;
+    }
 }
 
 @media (max-width: 600px) {
@@ -479,7 +540,14 @@ span{
         width: 100%;
     }
 }
-
+@media (max-width: 576px){
+    .services{
+        height: 230vh;
+    }
+    .services::after{
+        height: 230vh;
+    }
+}
 @media (max-width: 425px){
     .home-text{
         top: 30px;
